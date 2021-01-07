@@ -1,6 +1,6 @@
 {
   "name": "array-prototype-functions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Array prototype augmentation for easier arithmetics",
   "main": "index.js",
   "scripts": {

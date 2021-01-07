@@ -6,6 +6,22 @@ The purpose of this library is to augment the `Array.prototype` to provide funct
 
 I wrote those functions far too many times and have gotten sick maintaining them throughout multiple projects.
 
+## Usage
+
+The usage is dead simple. Just import the package and you're done:
+
+```
+// ES6 module
+import 'array-prototype-functions'
+
+// node.js
+require('array-prototype-functions')
+```
+
+Once the file is executed the `Array.prototype` is automatically augmented.
+
+Please note that if the functions are already present they will not be overriden! This means that if at any point in time the `Array.prototype` will gain functions like `head`, `tail` or any other that is provided by this library they will take precedense over the ones from this library.
+
 ## Why augmenting the `Array.prototype`?
 
 The question you might be asking is why do I augment the prototype instead of providing standalone functions that would do the same? The reason for it is simple: readability of the code that uses them. Here are a few examples:
