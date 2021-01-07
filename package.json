@@ -1,5 +1,5 @@
 {
-  "name": "@padcom/array-functions",
+  "name": "array-prototype-functions",
   "version": "1.0.0",
   "description": "Array prototype augmentation for easier arithmetics",
   "main": "index.js",
