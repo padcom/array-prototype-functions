@@ -1,6 +1,6 @@
 {
   "name": "array-prototype-functions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Array prototype augmentation for easier arithmetics",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
   },
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padcom/array-prototype-functions"
+  },
   "devDependencies": {
     "jest": "^26.6.3"
   }
