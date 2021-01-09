@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "lib": [ "es2015" ],
+    "declaration": true,
+    "outDir": "./",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strictNullChecks": true
+  },
+  "include": [ "src/*.ts" ],
+  "exclude": [ "node_modules/**/*", "**/*.spec.ts", "src/index.ts" ]
+}
