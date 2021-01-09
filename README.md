@@ -1,4 +1,5 @@
-![license](https://img.shields.io/github/license/padcom/array-prototype-functions)
+![build](https://img.shields.io/github/workflow/status/padcom/array-prototype-functions/build "Build status")
+![license](https://img.shields.io/github/license/padcom/array-prototype-functions "License")
 
 # Array prototype functions
 
