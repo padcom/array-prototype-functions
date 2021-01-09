@@ -6,7 +6,9 @@
     "test": "jest",
     "test:unit": "jest",
     "test:unit:watch": "jest --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "npm run build && npm run test && npm install && npm publish",
+    "publish:beta": "npm run build && npm run test && npm install && npm publish --tag beta"
   },
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "Apache-2.0",
