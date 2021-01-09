@@ -1,3 +1,5 @@
+![license](https://img.shields.io/github/license/padcom/array-prototype-functions)
+
 # Array prototype functions
 
 The API for arrays in JavaScript is quite vast. Functions such as `filter()`, `map()` and `reduce()` are quite powerful. The only problem with them is that they are very very generic.
