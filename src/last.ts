@@ -6,7 +6,7 @@ interface Array<T> {
 }
 
 if (Array.prototype.last === undefined) {
-  Array.prototype.last = function () {
+  Array.prototype.last = function<T>(this: T[]) {
     return this.length === 0 ? null : this[this.length - 1]
   }
 }

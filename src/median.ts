@@ -1,19 +1,21 @@
 interface Array<T> {
   /**
-   * Returns the sum of all elements in the array
+   * Returns the median of all elements in the array
    */
   median(): T | null
-  median<O>(field: string): O | null
-  median<O extends Comparable>(mapper: MapperFunc<T, O>): O | null
+  median(field: string): T | null
+  median(mapper: MapperFunc<T, Comparable>): T | null
 }
 
 if (Array.prototype.median === undefined) {
-  Array.prototype.median = function<I, O extends Comparable>(
-    fieldOrMapper: null | string | MapperFunc<I, O> = null
+  Array.prototype.median = function<T>(
+    this: T[],
+    fieldOrMapper: null | string | MapperFunc<T, Comparable> = null
   ) {
     if (this.length === 0) return null
 
     const midIndex = Math.floor(this.length / 2)
+    // @ts-ignore
     return this.sortBy(fieldOrMapper)[midIndex]
   }
 }

@@ -4,19 +4,20 @@ type MapperFunc<I, O extends Comparable> = (x: I) => O
 
 interface Array<T> {
   /**
-   * Returns the sum of all elements in the array
+   * Returns a sorted copy of the original array
    */
-  sortBy<O>(): T[]
-  sortBy<O>(order: SortOrder): T[]
-  sortBy<O>(field: string): T[]
-  sortBy<O>(field: string, order: SortOrder): T[]
-  sortBy<O extends Comparable>(mapper: MapperFunc<T, Comparable>): T[]
-  sortBy<O extends Comparable>(mapper: MapperFunc<T, Comparable>, order: SortOrder): T[]
+  sortBy(): T[]
+  sortBy(order: SortOrder): T[]
+  sortBy(field: string): T[]
+  sortBy(field: string, order: SortOrder): T[]
+  sortBy(mapper: MapperFunc<T, Comparable>): T[]
+  sortBy(mapper: MapperFunc<T, Comparable>, order: SortOrder): T[]
 }
 
 if (Array.prototype.sortBy === undefined) {
-  Array.prototype.sortBy = function<I, O extends Comparable>(
-    fieldOrMapperOrOrder: null | SortOrder | string | MapperFunc<I, Comparable> = null,
+  Array.prototype.sortBy = function<T, O extends Comparable>(
+    this: T[],
+    fieldOrMapperOrOrder: null | SortOrder | string | MapperFunc<T, Comparable> = null,
     order: SortOrder = 1
   ) {
     if (typeof fieldOrMapperOrOrder === 'number') {

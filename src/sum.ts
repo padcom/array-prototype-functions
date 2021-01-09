@@ -2,14 +2,15 @@ interface Array<T> {
   /**
    * Returns the sum of all elements in the array
    */
-  sum(): T | null
-  sum<O>(field: string): O | null
-  sum<O extends Comparable>(mapper: MapperFunc<T, O>): O | null
+  sum(): number
+  sum(field: string): number
+  sum(mapper: MapperFunc<T, number>): number
 }
 
 if (Array.prototype.sum === undefined) {
-  Array.prototype.sum = function<I, O extends Comparable>(
-    fieldOrMapper: null | string | MapperFunc<I, O> = null
+  Array.prototype.sum = function<T>(
+    this: T[],
+    fieldOrMapper: null | string | MapperFunc<T, number> = null
   ) {
     return this.reduce((acc, item) => {
       if (typeof fieldOrMapper === 'function') {

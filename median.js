@@ -3,6 +3,7 @@ if (Array.prototype.median === undefined) {
         if (this.length === 0)
             return null;
         const midIndex = Math.floor(this.length / 2);
+        // @ts-ignore
         return this.sortBy(fieldOrMapper)[midIndex];
     };
 }

@@ -1,12 +1,16 @@
 interface Array<T> {
+  /**
+   * Returns a list of unique values
+   */
   uniq(): T
-  uniq<O>(field: string): O
-  uniq<O extends Comparable>(mapper: MapperFunc<T, O>): O
+  uniq<O>(field: string): O[]
+  uniq<O extends Comparable>(mapper: MapperFunc<T, O>): O[]
 }
 
 if (Array.prototype.uniq === undefined) {
-  Array.prototype.uniq = function<I, O extends Comparable>(
-    fieldOrMapper: null | string | MapperFunc<I, O> = null
+  Array.prototype.uniq = function<T, O extends Comparable>(
+    this: T[],
+    fieldOrMapper: null | string | MapperFunc<T, O> = null
   ) {
     return [...new Set(this.map(item => {
       if (typeof fieldOrMapper === 'function') {

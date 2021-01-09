@@ -12,7 +12,7 @@ describe('min', () => {
   })
 
   it('will return min element by field', () => {
-    expect([ { x: 1 }, { x: 2 }, { x: 3 } ].min<number>('x')).toEqual({ x: 1 })
+    expect([ { x: 1 }, { x: 2 }, { x: 3 } ].min('x')).toEqual({ x: 1 })
   })
 
   it('will return min element by extract function', () => {

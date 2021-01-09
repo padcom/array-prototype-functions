@@ -3,14 +3,16 @@ interface Array<T> {
    * Returns the sum of all elements in the array
    */
   max(): T | null
-  max<O>(field: string): O | null
-  max<O extends Comparable>(mapper: MapperFunc<T, O>): O | null
+  max(field: string): T | null
+  max(mapper: MapperFunc<T, Comparable>): T | null
 }
 
 if (Array.prototype.max === undefined) {
-  Array.prototype.max = function<I, O extends Comparable>(
-    fieldOrMapper: null | string | MapperFunc<I, O> = null
+  Array.prototype.max = function<T>(
+    this: T[],
+    fieldOrMapper: null | string | MapperFunc<T, Comparable> = null
   ) {
+    // @ts-ignore
     return this.sortBy(fieldOrMapper, -1).first()
   }
 }

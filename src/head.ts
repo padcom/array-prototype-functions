@@ -6,7 +6,7 @@ interface Array<T> {
 }
 
 if (Array.prototype.head === undefined) {
-  Array.prototype.head = function () {
+  Array.prototype.head = function<T>(this: T[]) {
     return this.length === 0 ? null : this[0]
   }
 }

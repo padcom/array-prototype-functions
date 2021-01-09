@@ -6,8 +6,12 @@ describe('avg', () => {
     expect([1, 2, 3].avg()).toEqual(2)
   })
 
+  it('will return null if the array is empty', () => {
+    expect([].avg()).toBeNull()
+  })
+
   it('will avg value by field', () => {
-    expect([{ x: 1 }, { x: 2 }, { x: 3 }].avg<number>('x')).toEqual(2)
+    expect([{ x: 1 }, { x: 2 }, { x: 3 }].avg('x')).toEqual(2)
   })
 
   it('will avg by extract function', () => {

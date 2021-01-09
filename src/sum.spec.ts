@@ -5,8 +5,12 @@ describe('Array.prototype.sum', () => {
     expect([1, 2, 3].sum()).toEqual(6)
   })
 
+  it('will return zero if the array is empty', () => {
+    expect([].sum()).toEqual(0)
+  })
+
   it('will sum objects by field', () => {
-    expect([{ x: 1 }, { x: 2 }, { x: 3 }].sum<number>('x')).toEqual(6)
+    expect([{ x: 1 }, { x: 2 }, { x: 3 }].sum('x')).toEqual(6)
   })
 
   it('will sum objects by extract function', () => {
