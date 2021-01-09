@@ -7,3 +7,4 @@ if (Array.prototype.median === undefined) {
         return this.sortBy(fieldOrMapper)[midIndex];
     };
 }
+export {};

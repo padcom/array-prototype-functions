@@ -1,11 +1,15 @@
-interface Array<T> {
-  /**
-   * Returns an object with keys having lists of objects
-   * containing the given field value
-   * 
-   * @param field field to group by
-   */
-  groupBy(field: string): { [key: string]: T[] }
+import './blank-module'
+
+declare global {
+  interface Array<T> {
+    /**
+     * Returns an object with keys having lists of objects
+     * containing the given field value
+     * 
+     * @param field field to group by
+     */
+    groupBy(field: string): { [key: string]: T[] }
+  }
 }
 
 if (Array.prototype.groupBy === undefined) {

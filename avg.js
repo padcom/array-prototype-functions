@@ -9,3 +9,4 @@ if (Array.prototype.avg === undefined) {
         }
     };
 }
+export {};

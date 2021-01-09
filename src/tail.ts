@@ -1,8 +1,12 @@
-interface Array<T> {
-  /**
-   * Returns an array with all elements but the first element of the array
-   */
-  tail(): T[]
+import './blank-module'
+
+declare global {
+  interface Array<T> {
+    /**
+     * Returns an array with all elements but the first element of the array
+     */
+    tail(): T[]
+  }
 }
 
 if (Array.prototype.tail === undefined) {
@@ -10,3 +14,4 @@ if (Array.prototype.tail === undefined) {
     return [...this].splice(1)
   }
 }
+

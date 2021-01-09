@@ -1,3 +1,4 @@
+import './blank-module';
 if (Array.prototype.groupBy === undefined) {
     Array.prototype.groupBy = function (field) {
         if (!field) {

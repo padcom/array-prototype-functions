@@ -4,3 +4,4 @@ if (Array.prototype.max === undefined) {
         return this.sortBy(fieldOrMapper, -1).first();
     };
 }
+export {};

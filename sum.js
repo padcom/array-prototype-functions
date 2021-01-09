@@ -10,3 +10,4 @@ if (Array.prototype.sum === undefined) {
         }, 0);
     };
 }
+export {};
