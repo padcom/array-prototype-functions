@@ -12,32 +12,32 @@ The usage is dead simple. Just import the package and you're done:
 
 ```
 // ES6 module
-import 'array-prototype-functions/'avg'
-import 'array-prototype-functions/'first'
-import 'array-prototype-functions/'group-by'
-import 'array-prototype-functions/'head'
-import 'array-prototype-functions/'last'
-import 'array-prototype-functions/'max'
-import 'array-prototype-functions/'median'
-import 'array-prototype-functions/'min'
-import 'array-prototype-functions/'sort-by'
-import 'array-prototype-functions/'sum'
-import 'array-prototype-functions/'tail'
-import 'array-prototype-functions/'uniq'
+import 'array-prototype-functions/avg'
+import 'array-prototype-functions/first'
+import 'array-prototype-functions/group-by'
+import 'array-prototype-functions/head'
+import 'array-prototype-functions/last'
+import 'array-prototype-functions/max'
+import 'array-prototype-functions/median'
+import 'array-prototype-functions/min'
+import 'array-prototype-functions/sort-by'
+import 'array-prototype-functions/sum'
+import 'array-prototype-functions/tail'
+import 'array-prototype-functions/uniq'
 
 // node.js
-require('array-prototype-functions/'avg')
-require('array-prototype-functions/'first')
-require('array-prototype-functions/'group-by')
-require('array-prototype-functions/'head')
-require('array-prototype-functions/'last')
-require('array-prototype-functions/'max')
-require('array-prototype-functions/'median')
-require('array-prototype-functions/'min')
-require('array-prototype-functions/'sort-by')
-require('array-prototype-functions/'sum')
-require('array-prototype-functions/'tail')
-require('array-prototype-functions/'uniq')
+require('array-prototype-functions/avg')
+require('array-prototype-functions/first')
+require('array-prototype-functions/group-by')
+require('array-prototype-functions/head')
+require('array-prototype-functions/last')
+require('array-prototype-functions/max')
+require('array-prototype-functions/median')
+require('array-prototype-functions/min')
+require('array-prototype-functions/sort-by')
+require('array-prototype-functions/sum')
+require('array-prototype-functions/tail')
+require('array-prototype-functions/uniq')
 ```
 
 Please be aware that there are some dependencies between the imported functions (see below in the API section). You will need to import the dependencies yourself.
@@ -79,8 +79,9 @@ Returns all elements of the array besides the first element. Returns an empty ar
 
 ### `Array.prototype.first()`
 
-Synonym for: `Array.prototype.head()`
 Dependencies: none
+
+Synonym for: `Array.prototype.head()`
 
 Returns the first element of the array or null if the array is empty.
 
@@ -101,7 +102,7 @@ Returns a sum of elements in the array. The `fieldOrMapper` can be one of:
 
 ### `Array.prototype.avg(fieldOrMapper = null)`
 
-Dependencies: `array-prototype-functions/sum`
+Dependencies: `sum`
 
 Returns an average of values from the array (sum of all divided by the number of elements). Returns null if the array was empty. The `fieldOrMapper` can be one of:
 - null (or not provided) which means the elements will be treated as sum-able
@@ -121,7 +122,7 @@ The `order` parameter is either a positive or negative number. If it is negative
 
 ### `Array.ptototype.min(fieldOrMapper = null)`
 
-Dependencies: `array-prototype-functions/sort-by`, `array-prototype-functions/first`
+Dependencies: `sort-by`, `first`
 
 Returns the smallest element in the list. The `fieldOrMapper` can be one of:
 - null (or not provided) which means the elements will be treated as comparable
@@ -130,7 +131,7 @@ Returns the smallest element in the list. The `fieldOrMapper` can be one of:
 
 ### `Array.prototype.max(fieldOrMapper = null)`
 
-Dependencies: `array-prototype-functions/sort-by`, `array-prototype-functions/first`
+Dependencies: `sort-by`, `first`
 
 Returns the largest element in the list. The `fieldOrMapper` can be one of:
 - null (or not provided) which means the elements will be treated as comparable
@@ -139,7 +140,7 @@ Returns the largest element in the list. The `fieldOrMapper` can be one of:
 
 ### `Array.prototype.median(fieldOrMapper = null)`
 
-Dependencies: `array-prototype-functions/sort-by`
+Dependencies: `sort-by`
 
 Returns the median element in the list. The `fieldOrMapper` can be one of:
 - null (or not provided) which means the elements will be treated as comparable
@@ -148,9 +149,13 @@ Returns the median element in the list. The `fieldOrMapper` can be one of:
 
 ### `Array.prototype.groupBy(field)`
 
+Dependencies: none
+
 Returns a dictionary of lists of objects from the array grouped by a field name. The field name is required.
 
 ### `Array.prototype.uniq(fieldOrMapper = null)`
+
+Dependencies: none
 
 Returns a list of unique values from the original array. The `fieldOrMapper` can be one of:
 - null (or not provided) which means the elements will be treated as comparable
