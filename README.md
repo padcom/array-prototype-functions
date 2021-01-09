@@ -2,6 +2,7 @@
 ![version](https://img.shields.io/github/package-json/v/padcom/array-prototype-functions?logo=javascript "Current version")
 ![license](https://img.shields.io/github/license/padcom/array-prototype-functions?logo=apache&link=https://raw.githubusercontent.com/padcom/array-prototype-functions/master/LICENSE "License")
 ![downloads](https://img.shields.io/npm/dm/array-prototype-functions?logo=npm&link=https://www.npmjs.com/package/array-prototype-functions "Downloads")
+![issues](https://img.shields.io/github/issues/padcom/array-prototype-functions?logo=github&link=https://github.com/padcom/array-prototype-functions/issues "Issues")
 
 # Array prototype functions
 
