@@ -1,7 +1,7 @@
 import './sum'
 import './avg'
 
-describe('avg', () => {
+describe('Array.prototype.avg', () => {
   it('will avg numbers', () => {
     expect([1, 2, 3].avg()).toEqual(2)
   })

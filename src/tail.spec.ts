@@ -1,6 +1,6 @@
 import './tail'
 
-describe('tail', () => {
+describe('Array.prototype.tail', () => {
   it('will get the tail of an array', () => {
     expect([1, 2, 3].tail()).toEqual([2, 3])
   })

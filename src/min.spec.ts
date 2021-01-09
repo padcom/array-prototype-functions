@@ -2,7 +2,7 @@ import './first'
 import './sort-by'
 import './min'
 
-describe('min', () => {
+describe('Array.prototype.min', () => {
   it('will return min element', () => {
     expect([ 3, 1, 2 ].min()).toEqual(1)
   })

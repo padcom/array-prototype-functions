@@ -1,6 +1,6 @@
 import './uniq'
 
-describe('uniq', () => {
+describe('Array.prototype.uniq', () => {
   it('will return just unique elements', () => {
     expect([ 1, 1, 1, 2, 2, 3 ].uniq()).toEqual([ 1, 2, 3 ])
   })

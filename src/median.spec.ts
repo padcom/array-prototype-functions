@@ -1,7 +1,7 @@
 import './sort-by'
 import './median'
 
-describe('median', () => {
+describe('Array.prototype.median', () => {
   it('will return median element', () => {
     expect([ 3, 2, 1 ].median()).toEqual(2)
   })

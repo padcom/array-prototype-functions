@@ -1,6 +1,6 @@
 import './group-by'
 
-describe('groupBy', () => {
+describe('Array.prototype.groupBy', () => {
   it('will group objects by field', () => {
     expect([ { x: 1, y: 2 }, { x: 1, y: 4 }, { x: 5, y: 6 } ].groupBy('x')).toEqual({
       1: [ { x: 1, y: 2 }, { x: 1, y: 4 } ],
