@@ -3,4 +3,5 @@ dist
 node_modules
 src
 jest.config.js
+test-report.html
 tsconfig.json
