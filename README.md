@@ -1,7 +1,7 @@
-![build](https://img.shields.io/github/workflow/status/padcom/array-prototype-functions/build?logo=github "Build status")
+![build](https://img.shields.io/github/workflow/status/padcom/array-prototype-functions/build?logo=github&link=https://github.com/padcom/array-prototype-functions/actions?query=workflow%3Abuild "Build status")
 ![version](https://img.shields.io/github/package-json/v/padcom/array-prototype-functions?logo=javascript "Current version")
-![license](https://img.shields.io/github/license/padcom/array-prototype-functions?logo=apache "License")
-![downloads](https://img.shields.io/npm/dm/array-prototype-functions?logo=npm "Downloads")
+![license](https://img.shields.io/github/license/padcom/array-prototype-functions?logo=apache&link=https://raw.githubusercontent.com/padcom/array-prototype-functions/master/LICENSE "License")
+![downloads](https://img.shields.io/npm/dm/array-prototype-functions?logo=npm&link=https://www.npmjs.com/package/array-prototype-functions "Downloads")
 
 # Array prototype functions
 
