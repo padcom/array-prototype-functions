@@ -5,11 +5,20 @@ if (Array.prototype.sortBy === undefined) {
             fieldOrMapperOrOrder = null;
         }
         return [...this].sort((a, b) => {
+            let va, vb;
             if (typeof fieldOrMapperOrOrder === 'function') {
-                return (fieldOrMapperOrOrder(a) - fieldOrMapperOrOrder(b)) * order;
+                va = fieldOrMapperOrOrder(a);
+                vb = fieldOrMapperOrOrder(b);
             }
             else {
-                return (fieldOrMapperOrOrder ? a[fieldOrMapperOrOrder] - b[fieldOrMapperOrOrder] : a - b) * order;
+                va = fieldOrMapperOrOrder ? a[fieldOrMapperOrOrder] : a;
+                vb = fieldOrMapperOrOrder ? b[fieldOrMapperOrOrder] : b;
+            }
+            if (typeof va === 'string') {
+                return va.localeCompare(vb) * order;
+            }
+            else {
+                return (va - vb) * order;
             }
         });
     };

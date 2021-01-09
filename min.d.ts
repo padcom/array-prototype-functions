@@ -4,5 +4,5 @@ interface Array<T> {
      */
     min(): T | null;
     min<O>(field: string): O | null;
-    min<O>(mapper: MapperFunc<T, O>): O | null;
+    min<O extends Comparable>(mapper: MapperFunc<T, O>): O | null;
 }

@@ -4,5 +4,5 @@ interface Array<T> {
      */
     sum(): T | null;
     sum<O>(field: string): O | null;
-    sum<O>(mapper: MapperFunc<T, O>): O | null;
+    sum<O extends Comparable>(mapper: MapperFunc<T, O>): O | null;
 }

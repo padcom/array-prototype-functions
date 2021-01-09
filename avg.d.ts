@@ -4,5 +4,5 @@ interface Array<T> {
      */
     avg(): T | null;
     avg<O>(field: string): O | null;
-    avg<O>(mapper: MapperFunc<T, O>): O | null;
+    avg<O extends Comparable>(mapper: MapperFunc<T, O>): O | null;
 }

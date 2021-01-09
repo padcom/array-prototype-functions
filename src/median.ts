@@ -4,11 +4,11 @@ interface Array<T> {
    */
   median(): T | null
   median<O>(field: string): O | null
-  median<O>(mapper: MapperFunc<T, O>): O | null
+  median<O extends Comparable>(mapper: MapperFunc<T, O>): O | null
 }
 
 if (Array.prototype.median === undefined) {
-  Array.prototype.median = function<I, O>(
+  Array.prototype.median = function<I, O extends Comparable>(
     fieldOrMapper: null | string | MapperFunc<I, O> = null
   ) {
     if (this.length === 0) return null

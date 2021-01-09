@@ -4,5 +4,5 @@ interface Array<T> {
      */
     median(): T | null;
     median<O>(field: string): O | null;
-    median<O>(mapper: MapperFunc<T, O>): O | null;
+    median<O extends Comparable>(mapper: MapperFunc<T, O>): O | null;
 }

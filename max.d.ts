@@ -4,5 +4,5 @@ interface Array<T> {
      */
     max(): T | null;
     max<O>(field: string): O | null;
-    max<O>(mapper: MapperFunc<T, O>): O | null;
+    max<O extends Comparable>(mapper: MapperFunc<T, O>): O | null;
 }
