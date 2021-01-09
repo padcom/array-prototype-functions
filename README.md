@@ -5,7 +5,7 @@
   <a href="https://coveralls.io/github/padcom/array-prototype-functions" target="_blank">
     <img src="https://img.shields.io/coveralls/github/padcom/array-prototype-functions?logo=coveralls&sanitize=true" alt="Code coverage">
   </a>
-  <img src="https://img.shields.io/github/languages/top/padcom/array-prototype-functions?logo=typescript&logoColor=yellow&sanitize=true">
+  <!--<img src="https://img.shields.io/github/languages/top/padcom/array-prototype-functions?logo=typescript&logoColor=yellow&sanitize=true">-->
   <a href="https://www.npmjs.com/package/array-prototype-functions" target="_blank">
     <img src="https://img.shields.io/github/package-json/v/padcom/array-prototype-functions?logo=npm&sanitize=true" alt="Current version">
   </a>
