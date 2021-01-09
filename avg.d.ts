@@ -2,7 +2,7 @@ interface Array<T> {
     /**
      * Returns the average value of all elements in the array
      */
-    avg(): T | null;
+    avg(): number | null;
     /**
      * Returns the average of all field values of elements in the array
      */
