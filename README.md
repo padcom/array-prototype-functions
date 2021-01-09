@@ -1,8 +1,18 @@
-![build](https://img.shields.io/github/workflow/status/padcom/array-prototype-functions/build?logo=github&link=https://github.com/padcom/array-prototype-functions/actions?query=workflow%3Abuild "Build status")
-![version](https://img.shields.io/github/package-json/v/padcom/array-prototype-functions?logo=javascript "Current version")
-![license](https://img.shields.io/github/license/padcom/array-prototype-functions?logo=apache&link=https://raw.githubusercontent.com/padcom/array-prototype-functions/master/LICENSE "License")
-![downloads](https://img.shields.io/npm/dm/array-prototype-functions?logo=npm&link=https://www.npmjs.com/package/array-prototype-functions "Downloads")
-![issues](https://img.shields.io/github/issues/padcom/array-prototype-functions?logo=github&link=https://github.com/padcom/array-prototype-functions/issues "Issues")
+<p align="center">
+  <a href="https://github.com/padcom/array-prototype-functions/actions?query=workflow%3Abuild">
+    <img src="https://img.shields.io/github/workflow/status/padcom/array-prototype-functions/build?logo=github&sanitize=true" alt="Build status">
+  </a>
+  <img src="https://img.shields.io/github/package-json/v/padcom/array-prototype-functions?logo=javascript&sanitize=true" alt="Current version">
+  <a href="https://raw.githubusercontent.com/padcom/array-prototype-functions/master/LICENSE">
+    <img src="https://img.shields.io/github/license/padcom/array-prototype-functions?logo=apache&sanitize=true" alt="License">
+  </a>
+  <a href="https://www.npmjs.com/package/array-prototype-functions">
+    <img src="https://img.shields.io/npm/dm/array-prototype-functions?logo=npm&sanitize=true" alt="Downloads">
+  </a>
+  <a href="https://github.com/padcom/array-prototype-functions/issues">
+    <img src="https://img.shields.io/github/issues/padcom/array-prototype-functions?logo=github&sanitize=true" alt="Issues">
+  </a>
+</p>
 
 # Array prototype functions
 
