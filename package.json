@@ -1,14 +1,13 @@
 {
   "name": "array-prototype-functions",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "Array prototype augmentation for easier arithmetics and overall pleasure!",
   "scripts": {
     "test": "jest",
     "test:unit": "jest",
     "test:unit:watch": "jest --watch",
     "build": "tsc",
-    "publish": "npm run build && npm run test && npm install && npm publish",
-    "publish:beta": "npm run build && npm run test && npm install && npm publish --tag beta"
+    "prepublishOnly": "npm install && npm run build && npm run test"
   },
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "Apache-2.0",
