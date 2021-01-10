@@ -37,6 +37,7 @@ The usage is dead simple. Just import the package and you're done:
 import 'array-prototype-functions/avg'
 import 'array-prototype-functions/first'
 import 'array-prototype-functions/group-by'
+import 'array-prototype-functions/group-by-as-map'
 import 'array-prototype-functions/head'
 import 'array-prototype-functions/last'
 import 'array-prototype-functions/max'
@@ -51,6 +52,7 @@ import 'array-prototype-functions/uniq'
 require('array-prototype-functions/avg')
 require('array-prototype-functions/first')
 require('array-prototype-functions/group-by')
+require('array-prototype-functions/group-by-as-map')
 require('array-prototype-functions/head')
 require('array-prototype-functions/last')
 require('array-prototype-functions/max')
@@ -174,6 +176,17 @@ Returns the median element in the list. The `fieldOrMapper` can be one of:
 Dependencies: none
 
 Returns a dictionary of lists of objects from the array grouped by a field name. The field name is required.
+
+Objects that don't have the field in them will be skipped.
+
+### `Array.prototype.groupByAsMap(field)`
+
+Dependencies: none
+
+Returns a Map of lists of objects from the array grouped by a field name. The field name is required.
+The difference to `groupBy(field)` is that the return value is an instance of `Map<any, T[]>` which means that the original type of the values of the field is also preserved and not converted to a string. This also means that if throughout the objects in the source array field values have different types they will be treated differently and you'll end up having more than one item in the result.
+
+Objects that don't have the field in them will be skipped.
 
 ### `Array.prototype.uniq(fieldOrMapper = null)`
 
