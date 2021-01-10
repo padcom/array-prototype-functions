@@ -1,6 +1,6 @@
 {
   "name": "array-prototype-functions",
-  "version": "2.7.2",
+  "version": "2.8.0",
   "description": "Array prototype augmentation for easier arithmetics and overall pleasure!",
   "scripts": {
     "test": "jest",
