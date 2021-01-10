@@ -171,11 +171,14 @@ Returns the median element in the list. The `fieldOrMapper` can be one of:
 - string - in which case it will be a name of field to extract from the objects in the array and then to sort them up
 - a function that takes the array element as parameter and shall return a comparable value
 
-### `Array.prototype.groupBy(field)`
+### `Array.prototype.groupBy(fieldOrMapper)`
 
 Dependencies: none
 
-Returns a dictionary of lists of objects from the array grouped by a field name. The field name is required.
+Returns a dictionary of lists of objects from the array grouped by a field name. The `fieldOrMapper` is required and can be one of:
+
+- string - in which case it will be a name of field to extract from the objects in the array and then to sort them up
+- a function that takes the array element as parameter and shall return a string to group objects by
 
 Objects that don't have the field in them will be skipped.
 
@@ -183,7 +186,11 @@ Objects that don't have the field in them will be skipped.
 
 Dependencies: none
 
-Returns a Map of lists of objects from the array grouped by a field name. The field name is required.
+Returns a Map of lists of objects from the array grouped by a field name. The `fieldOrMapper` is required and can be one of:
+
+- string - in which case it will be a name of field to extract from the objects in the array and then to sort them up
+- a function that takes the array element as parameter and shall return a value to group objects by
+
 The difference to `groupBy(field)` is that the return value is an instance of `Map<any, T[]>` which means that the original type of the values of the field is also preserved and not converted to a string. This also means that if throughout the objects in the source array field values have different types they will be treated differently and you'll end up having more than one item in the result.
 
 Objects that don't have the field in them will be skipped.
