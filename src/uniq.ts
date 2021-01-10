@@ -13,7 +13,7 @@ declare global {
     /**
      * Returns a list of unique values of a field extracted from the objects using a mapper function
      */
-    uniq<O extends Comparable>(mapper: MapperFunc<T, O>): O[]
+    uniq<O>(mapper: (item: T) => O): O[]
   }
 }
 
@@ -26,7 +26,7 @@ if (Array.prototype.uniq === undefined) {
       if (typeof fieldOrMapper === 'function') {
         return fieldOrMapper(item)
       } else {
-        return fieldOrMapper ? item[fieldOrMapper] : item
+        return fieldOrMapper !== null ? item[fieldOrMapper] : item
       }
     }))]
   }
