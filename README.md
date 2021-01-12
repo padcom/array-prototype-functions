@@ -43,6 +43,7 @@ import 'array-prototype-functions/last'
 import 'array-prototype-functions/max'
 import 'array-prototype-functions/median'
 import 'array-prototype-functions/min'
+import 'array-prototype-functions/pluck'
 import 'array-prototype-functions/sort-by'
 import 'array-prototype-functions/sum'
 import 'array-prototype-functions/tail'
@@ -58,6 +59,7 @@ require('array-prototype-functions/last')
 require('array-prototype-functions/max')
 require('array-prototype-functions/median')
 require('array-prototype-functions/min')
+require('array-prototype-functions/pluck')
 require('array-prototype-functions/sort-by')
 require('array-prototype-functions/sum')
 require('array-prototype-functions/tail')
@@ -130,6 +132,14 @@ Returns an average of values from the array (sum of all divided by the number of
 - null (or not provided) which means the elements will be treated as sum-able
 - string - in which case it will be a name of field to extract from the objects in the array and then to sum them up
 - a function that takes the array element as parameter and shall return a sum-able value
+
+### `Array.prototype.pluck(fieldOrMapper)`
+
+Dependencies: `none`
+
+Returns an array containing objects having a subset of properties of the original elements of the array. The `fieldOrMapper` can be one of:
+- string - in which case it will be a name of field to extract from the objects in the array
+- a function that takes the array element as parameter and shall return the values to pluck
 
 ### `Array.prototype.sortBy(fieldOrMapper = null, order = 1)`
 
