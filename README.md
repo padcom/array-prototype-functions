@@ -101,19 +101,17 @@ Dependencies: none
 
 Returns all elements of the array besides the first element. Returns an empty array if the original array was empty or had just one element.
 
-### `Array.prototype.first()`
+### `Array.prototype.first(n = null)`
 
 Dependencies: none
 
-Synonym for: `Array.prototype.head()`
+Returns the first element of the array or null if the array is empty. If the `n` parameter is given it returns an array of `n` or less elements (if the array doesn't contain as many elements to begin with)
 
-Returns the first element of the array or null if the array is empty.
-
-### `Array.prototype.last()`
+### `Array.prototype.last(n = null)`
 
 Dependencies: none
 
-Returns the last element of the array or null if the array is empty
+Returns the last element of the array or null if the array is empty. If the `n` parameter is given it returns an array of `n` or less elements (if the array doesn't contain as many elements to begin with)
 
 ### `Array.prototype.sum(fieldOrMapper = null)`
 
