@@ -45,6 +45,7 @@ import 'array-prototype-functions/median'
 import 'array-prototype-functions/min'
 import 'array-prototype-functions/pluck'
 import 'array-prototype-functions/sort-by'
+import 'array-prototype-functions/static'
 import 'array-prototype-functions/sum'
 import 'array-prototype-functions/tail'
 import 'array-prototype-functions/uniq'
@@ -61,6 +62,7 @@ require('array-prototype-functions/median')
 require('array-prototype-functions/min')
 require('array-prototype-functions/pluck')
 require('array-prototype-functions/sort-by')
+require('array-prototype-functions/static')
 require('array-prototype-functions/sum')
 require('array-prototype-functions/tail')
 require('array-prototype-functions/uniq')
@@ -213,6 +215,24 @@ Returns a list of unique values from the original array. The `fieldOrMapper` can
 - a function that takes the array element as parameter and shall return a comparable value
 
 If the `fieldOrMapper` is specified the final list will return only values of the specified field or the values returned by the mapper.
+
+### `Array.generate<T>(length: number, init: index => T | null): T[]`
+
+Dependencies: none
+
+Returns a new list with elements initialized with the init method.
+
+For example, to generate 10 random numbers:
+
+```
+const values = Array.generate(10, Math.random)
+```
+
+or to generate a list of numbers from 0 to 9
+
+```
+const values = Array.generate(10, index => index)
+```
 
 ## Additional information
 

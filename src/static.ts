@@ -10,6 +10,8 @@ declare global {
   }
 }
 
-Array.generate = function<T>(length, init: InitCallback<T> = index => null) {
-  return Array.apply(null, { length }).map(Function.call, init)
+if (!Array.generate) {
+  Array.generate = function<T>(length, init: InitCallback<T> = index => null) {
+    return Array.apply(null, { length }).map(Function.call, init)
+  }
 }
