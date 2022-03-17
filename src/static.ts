@@ -11,5 +11,5 @@ declare global {
 }
 
 Array.generate = function<T>(length, init: InitCallback<T> = index => null) {
-  return <T[]>Array.apply(null, { length }).map(Function.call, init)
+  return Array.apply(null, { length }).map(Function.call, init)
 }

@@ -1,6 +1,6 @@
 {
   "name": "array-prototype-functions",
-  "version": "2.13.0",
+  "version": "2.13.1",
   "description": "Array prototype augmentation for easier arithmetics and overall pleasure!",
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "keywords": [
